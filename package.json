@@ -1,14 +1,15 @@
 {
+  "homepage": "https://umayhan.github.io/questionaryForAnst",
   "name": "react",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.tsx",
-  "homepage": "https://umayhan.github.io/questionaryForAnst/",
+  "main": "src/index.js",
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scripts": "5.0.1",
+    "shebang-regex": "^4.0.0",
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
@@ -16,15 +17,16 @@
     "@types/react-dom": "18.2.15",
     "gh-pages": "^6.1.1",
     "loader-utils": "3.2.1",
+    "s": "^1.0.0",
     "typescript": "4.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
