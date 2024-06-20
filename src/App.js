@@ -8,56 +8,57 @@ const jsonData = {
       question: "Сидячи біля вікна вагона потяга, хлопчик почав рахувати телеграфні стовпи. Він нарахував 10 стовпів. Яку відстань пройшов за цей час поїзд, якщо відстань між стовпами 50м?",
       answers: ["900м", "450м", "500м", "550м"],
       correct: 1,
-      correctImageUrl: "/img1correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img1correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "Як звали першого хлопця твоєї подруги Швець Анастасії?",
       answers: ["Саша", "Влад", "Сергій", "Женя"],
       correct: 3,
-      correctImageUrl: "/img2correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img2correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "В тебе є дівчина Жигун Юлія. Який з цих фактів про неї правда?",
       answers: ["Грала в карти на гроші в школі", "Має шрам після автоаварії", "Вивчала азербайджанську мову", "Гуляла вночі на кладовищі"],
       correct: 0,
-      correctImageUrl: "/img3correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img3correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "Згадаємо за що ти отримав диплом. Як умовно чиста продукція позначається у моделі міжгалузевого балансу?",
       answers: ["z", "y", "x", "a"],
       correct: 0,
-      correctImageUrl: "/img4correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img4correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "В тебе є подруга Ткаченко Анастасія. Ти був знайомий з її татом. Яке її по батькові?",
       answers: ["Ігорівна", "Володимирівна", "Юріївна", "Андріївна"],
       correct: 2,
-      correctImageUrl: "/img5correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img5correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "Як звали твою вчительку інформатики у школі?",
       answers: ["Олена Вікторівна", "Людмила Олексіївна", "Тетяна Аксентіївна", "Катерина Вікторівна"],
       correct: 0,
-      correctImageUrl: "/img6correct.gif",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img6correct.gif",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "В 2009 році один чоловік заплатив за 2 піци 10.000 біткоїнів. А що зробив ти за кусок піци в 2020 році?",
       answers: ["Заплатив 50 гривень", "Поїхав в інше місто", "З'їв муху", "Дав пизди Яценко Микиті на Трухановому острові"],
       correct: 3,
-      correctImageUrl: "/img7correct.png",
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./img7correct.png",
+      wrongImageUrl: "./shrek.webp"
     },
     {
       question: "В аніме “Атака титанів” був титан на ім'я Бін. Яка характеристика йому відповідає?",
       answers: ["4-метровий з блакитними очима", "7-метровий з коротким коричневим волоссям", "6-метровий з дуже великою головою", "6-метровий з довгим світлим волоссям"],
       correct: 1,
-      wrongImageUrl: "/shrek.webp"
+      correctImageUrl: "./shrek.webp",
+      wrongImageUrl: "./shrek.webp"
     }
   ],
 };
@@ -66,10 +67,10 @@ const GIF_WIDTH = 150;
 const GIF_HEIGHT = 150;
 
 export default function App() {
-  const [playCorrect] = useSound('/correct.mp3')
-  const [playIncorrect] = useSound('/incorrect.mp3')
-  const [playVictory] = useSound('/victory.mp3')
-  const [playDefeat] = useSound('/defeat.mp3')
+  const [playCorrect] = useSound('./correct.mp3')
+  const [playIncorrect] = useSound('./incorrect.mp3')
+  const [playVictory] = useSound('./victory.mp3')
+  const [playDefeat] = useSound('./defeat.mp3')
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
