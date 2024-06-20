@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
-  "homepage": "https://<username>.github.io/<repository-name>/",
+  "homepage": "https://UMayhan.github.io/questionaryForAnst/",
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
