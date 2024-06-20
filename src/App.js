@@ -57,7 +57,6 @@ const jsonData = {
       question: "В аніме “Атака титанів” був титан на ім'я Бін. Яка характеристика йому відповідає?",
       answers: ["4-метровий з блакитними очима", "7-метровий з коротким коричневим волоссям", "6-метровий з дуже великою головою", "6-метровий з довгим світлим волоссям"],
       correct: 1,
-      correctImageUrl: "/img6correct.gif",
       wrongImageUrl: "/shrek.webp"
     }
   ],
@@ -89,15 +88,14 @@ export default function App() {
     if(currentQuestionIndex === jsonData.options.length-1) {
       if(hadWrongAnswer || !isCorrect) {
         setHadWrongAnswer(!isCorrect)
-        setTimeout(() => setCurrentQuestionIndex(currentQuestionIndex + 1), 250)
         playDefeat()
       }
       else {
         playVictory()
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedAnswer(null);
+        return
       }
-      return
     } else if (isCorrect) {
       playCorrect()
     } else {
