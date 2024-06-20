@@ -87,7 +87,7 @@ export default function App() {
     setSelectedAnswer(index);
     if(currentQuestionIndex === jsonData.options.length-1) {
       if(hadWrongAnswer || !isCorrect) {
-        setHadWrongAnswer(!isCorrect)
+        setHadWrongAnswer(true)
         playDefeat()
       }
       else {
